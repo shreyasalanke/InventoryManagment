@@ -22,5 +22,36 @@ public class InventoryManagementMian {
 			newItem.setItemPricePerKg(scanner.nextDouble());
 			inventoryService.addInventoryItems(newItem);
 		}
-	}
+		System.out.println("Enter a your choice  :1.Enter items in inventory. 2.Print details of specific item 3.Edit the name details 4.caclculate value of inventory.5.Wrong Input.");
+		int key = scanner.nextInt();
+		switch (key) 
+		{
+		case 1:
+		{
+			inventoryService.displayItems();
+			break;
+		}
+		case 2:
+		{
+			System.out.println("Enter the item name to check the inventory");
+			inventoryService.displayByName(scanner.next());
+			break;
+		}
+		case 3:
+		{	
+			System.out.println("Enter the name of item to change its details");
+		    inventoryService.editItemsByName(scanner.next());
+		    break;
+			
+		}
+		case 4:
+		{
+			inventoryService.calculateItems();
+		    break;
+			
+		}
+	    default:
+		System.out.println("Invalid number");
+	}	
+ }
 }

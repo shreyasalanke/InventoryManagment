@@ -24,6 +24,11 @@ public class Items {
 	public void setItemPricePerKg(double itemPricePerKg) {
 		this.itemPricePerKg = itemPricePerKg;
 	}
-
+   @Override
+   public String toString()
+	{
+		return "Items [itemName=" + itemNames + ", itemWeight=" + itemWeight + ", itemPricePerKg=" + itemPricePerKg
+				+ "]";
+	}
 	
 }
